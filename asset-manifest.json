@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/qreader/static/css/main.c6c55734.css",
+    "main.js": "/qreader/static/js/main.6e12426a.js",
+    "static/js/787.037d72d9.chunk.js": "/qreader/static/js/787.037d72d9.chunk.js",
+    "index.html": "/qreader/index.html",
+    "main.c6c55734.css.map": "/qreader/static/css/main.c6c55734.css.map",
+    "main.6e12426a.js.map": "/qreader/static/js/main.6e12426a.js.map",
+    "787.037d72d9.chunk.js.map": "/qreader/static/js/787.037d72d9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6c55734.css",
+    "static/js/main.6e12426a.js"
+  ]
+}
