@@ -1,0 +1,23 @@
+.container{
+    display: table;
+    border-collapse:separate;
+    border-spacing:1em;
+}
+
+.code-symbol{
+    font-size: 3em;
+    display: table-cell;
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 1.2em;
+    height: 2.4em;
+    margin: 10px;
+    background-color: white;
+    display: table-cell; 
+    vertical-align: middle;
+
+}
+
+.label {
+    display: block;
+}

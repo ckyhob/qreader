@@ -5,6 +5,7 @@ import QrReader from "react-web-qr-reader";
 
 
 import useWindowDimensions from "../hooks/useWindowDimensions";
+import CodeInput from "../components/code-input/CodeInput";
 
 const ScanPage = () => {
     const { height, width } = useWindowDimensions();
@@ -47,6 +48,7 @@ const ScanPage = () => {
             </div>
             <div className="result-preview">
                 {result}
+                <CodeInput />
             </div>
         </div>
     )
