@@ -3,3 +3,9 @@
     grid-template-columns: 1fr;
     height: 100vh;
 }
+
+.scan-preview{
+    height: 50vh;
+    padding: 15px;
+    
+}
