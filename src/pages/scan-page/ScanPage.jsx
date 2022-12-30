@@ -28,6 +28,7 @@ const ScanPage = () => {
 
         setResult( prev => result.data)
         }
+        console.log(result)
     };
 
     const handleError = (error) => {
