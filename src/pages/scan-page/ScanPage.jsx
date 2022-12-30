@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import './ScanPage.css';
 
 import QrReader from "react-web-qr-reader";
@@ -20,15 +20,15 @@ const ScanPage = () => {
         width: {width}
     };
 
-    const [result, setResult] = useState("No result");
+    // const [result, setResult] = useState("No result");
 
     const handleScan = (result) => {
         if (result) {
         console.log(result.data)
 
-        setResult( prev => result.data)
+        // setResult( prev => result.data)
         }
-        console.log(result)
+        // console.log(result)
     };
 
     const handleError = (error) => {
