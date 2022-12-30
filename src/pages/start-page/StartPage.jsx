@@ -9,7 +9,13 @@ const StartPage = () => {
         <div classname='container'>
 
             <h2>Start Page</h2>
-            <p>Текст приветствия. Краткое описание если требуется.</p>
+
+            <center>Текст приветствия. Краткое описание если требуется.</center>
+            
+            <br></br>
+            <br></br>
+            <br></br>
+            
             <button onClick={() => navigate('/scan')}>
                 Ввести код
             </button>

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
-// import ScanPage from './pages/ScanPage';
+
 
 import { HashRouter, Routes, Route } from 'react-router-dom'
 
@@ -22,24 +22,19 @@ function App() {
 
   
   return (
+    <div className='App'>
+      <HashRouter>
 
-    <HashRouter>
+        <Routes>
+          
+          <Route path='/'       element={<StartPage />} />
+          <Route path='/scan'   element={<ScanPage />} />
+          <Route path='/result' element={<ResultPage />} />
 
-      <Routes>
-        
-        <Route path='/'       element={<StartPage />} />
-        <Route path='/scan'   element={<ScanPage />} />
-        <Route path='/result' element={<ResultPage />} />
+        </Routes>
 
-      </Routes>
-
-
-    </HashRouter>
-    // <div className="App">
-
-    //   <ScanPage />
-
-    // </div>
+      </HashRouter>
+    </div>
   );
 }
 
