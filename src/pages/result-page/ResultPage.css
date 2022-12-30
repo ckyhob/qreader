@@ -1,0 +1,22 @@
+.scroll-container{
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: scroll;
+    margin-bottom: 2rem;
+    max-height: fit-content;
+    background-color: rgb(155, 173, 238);
+    width: 80%;
+
+    border-radius: 7px;
+}
+
+p{
+    text-align:left; 
+    padding-left : 1em;
+    padding-right : 1em;
+    font-size: medium;
+}
+
+i{
+    font-size: smaller;
+}

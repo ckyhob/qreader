@@ -1,25 +1,45 @@
-:root {
-  --doc-height: 100%;
- }
- 
- html,
- body {
-  padding: 0;
-  margin: 0;
-  height: 100vh; /* fallback for Js load */
-  height: var(--doc-height);
- }
- 
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
+
 
 .App {
   text-align: center;
+  font-family: 'Oxygen', sans-serif;
+  
   height: 100vh;
-
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #8f8f8f;
-
+  padding-top: 2rem;
+  
+  background: rgb(124,185,232);
+  background: linear-gradient(137deg, rgba(124,185,232,1) 19%, rgba(0,48,143,1) 100%);
 }
 
+h2{
+  margin-top: 0;
+}
+
+p{
+  margin: auto;
+  margin-bottom: 2rem;
+ 
+  padding-left : 1em;
+  padding-right : 1em;
+  text-align:left; 
+
+  font-size: medium;
+}
+
+button{
+  width : 60vw;
+  height: 3rem;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  border: 2px solid #020455;
+  border-radius: 7px;
+  background-color: #457cc0;
+}
+
+button:hover{
+  cursor: pointer
+}
