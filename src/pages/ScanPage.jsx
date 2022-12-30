@@ -21,9 +21,9 @@ const ScanPage = () => {
 
     const handleScan = (result) => {
         if (result) {
-        console.log(result)
+        console.log(result.data)
 
-        setResult( prev => result.data)
+        setResult( prev => result.data.data)
         }
     };
 
