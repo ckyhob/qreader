@@ -4,10 +4,15 @@
   font-family: 'Oxygen', sans-serif;
   
   height: 100vh;
-  padding-top: 2rem;
   
   background: rgb(124,185,232);
   background: linear-gradient(137deg, rgba(124,185,232,1) 19%, rgba(0,48,143,1) 100%);
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
 }
 
 h2{
