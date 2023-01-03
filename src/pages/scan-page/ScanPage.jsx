@@ -41,8 +41,8 @@ const ScanPage = () => {
     return(
             <div classname='container'>      
                     
-                <div className="scan-preview">
-                    <div style={{width: `${squareSize}`, height: `${squareSize}`, backgroundColor: 'red'}}>
+                <div className="scan-preview"  tabindex="0">
+                    <div style={{width: `${squareSize}`, height: `${squareSize}`, backgroundColor: 'black'}}>
                         <QrReader
                             delay={delay}
                             style={previewStyle}
