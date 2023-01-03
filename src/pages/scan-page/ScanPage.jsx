@@ -9,7 +9,14 @@ import CodeField from "../../components/otp-field/CodeField.tsx";
 
 import { useCode } from "../../store/store";
 
+import { useEffect } from "react";
+
 const ScanPage = () => {
+    
+
+    useEffect(()=> {
+        document.getElementById('btn1').focus()
+    }, [])
 
     const setCode = useCode(state=>state.setCode);
 
@@ -39,9 +46,9 @@ const ScanPage = () => {
 
     const navigate = useNavigate()
     return(
-            <div classname='container'>      
+            <div classname='wrapper'>      
                     
-                <div className="scan-preview"  tabindex="0">
+                <div className="scan-preview" id="scanPreview">
                     <div style={{width: `${squareSize}`, height: `${squareSize}`, backgroundColor: 'black'}}>
                         <QrReader
                             delay={delay}
@@ -52,7 +59,7 @@ const ScanPage = () => {
                     </div>
                 </div>
 
-
+<div className="result-preview">
                 <br></br>
 
                 <CodeField disabled={false} />            
@@ -61,9 +68,10 @@ const ScanPage = () => {
                 <br></br>
                 <br></br>
 
-                <button onClick={() => navigate('/result')}>
+                <button id="btn1" onClick={() => navigate('/result')}>
                     To results
                 </button>
+</div>
             </div>
             )
 }
