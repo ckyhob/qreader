@@ -13,7 +13,7 @@ const ScanPage = () => {
     const { height, width } = useWindowDimensions();
 
 
-    const delay = 500;
+    const delay = 300;
 
     const previewStyle = {
         height: {height},
@@ -21,9 +21,13 @@ const ScanPage = () => {
     };
 
     const handleScan = (result) => {
+        console.log('Scanned : ', result.data);
         if (result) {
         console.log(result.data)
-        change();
+        
+        setArr(prev => {
+            return ['8','8','8','8','8','8','8','8']
+            })
         // setResult( prev => result.data)
         }
     };
@@ -67,6 +71,9 @@ const ScanPage = () => {
 
                 <br></br>
                 <br></br>
+                <button onClick={() => change()}>
+                    Change
+                </button>
                 <br></br>
 
                 <button onClick={() => navigate('/result')}>
