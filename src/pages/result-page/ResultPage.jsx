@@ -1,13 +1,15 @@
 import React from "react";
 import './ResultPage.css';
 import { useNavigate } from 'react-router-dom';
-import OtpField from "../../components/otp-field/OtpField.tsx";
+import CodeField from "../../components/otp-field/CodeField.tsx";
+import { useCode } from "../../store/store";
 
 
 const ResultPage = () => {
-    const arr = ['8','8','8','8','8','8','8','8']
-       
+    const setCodeToDefault = useCode(state => state.setCodeToDefault);
     const navigate = useNavigate()
+
+
     return(
             <div className='container'>
 
@@ -15,7 +17,7 @@ const ResultPage = () => {
                     Результаты для кода:
                 </h3>
 
-                <OtpField count={arr.length} content={arr} /> 
+                <CodeField disabled={true} /> 
                 
                 <br></br>
                 <br></br>
@@ -133,7 +135,10 @@ const ResultPage = () => {
                 <br></br>
                 <br></br>
                 <br></br>
-                <button onClick={() => navigate('/scan')}>
+                <button onClick={() => {
+                        setCodeToDefault();
+                        navigate('/scan')
+                    }}>
                     Scan once more
                 </button>
             </div>

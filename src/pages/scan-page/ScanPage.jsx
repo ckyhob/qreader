@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React  from "react";
 import './ScanPage.css';
 
 import QrReader from "react-web-qr-reader";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 import { useNavigate } from 'react-router-dom';
-import OtpField from "../../components/otp-field/OtpField.tsx";
+import CodeField from "../../components/otp-field/CodeField.tsx";
 
-
+import { useCode } from "../../store/store";
 
 const ScanPage = () => {
-    const { height, width } = useWindowDimensions();
 
+    const setCode = useCode(state=>state.setCode);
+
+    const { height, width } = useWindowDimensions();
 
     const delay = 300;
 
@@ -21,14 +23,11 @@ const ScanPage = () => {
     };
 
     const handleScan = (result) => {
-        console.log('Scanned : ', result.data);
+        const scannedCode = result.data
+        console.log('Scanned : ', scannedCode);
         if (result) {
-        console.log(result.data)
-        
-        setArr(prev => {
-            return ['8','8','8','8','8','8','8','8']
-            })
-        // setResult( prev => result.data)
+            setCode(scannedCode);
+            console.log('Set: ', scannedCode)
         }
     };
 
@@ -37,16 +36,6 @@ const ScanPage = () => {
     };
 
     const squareSize = `${(Number(Math.min(height, width)) - 30)}px`;
-
-    const [arr, setArr] = useState(['','','','','','','','']);
-
-    const change = () => {
-        setArr(prev => {
-        return ['8','8','8','8','8','8','8','8']
-        })
-        console.log(arr)
-    }
-
 
     const navigate = useNavigate()
     return(
@@ -66,14 +55,10 @@ const ScanPage = () => {
 
                 <br></br>
 
-                <OtpField count={8} content={arr} />            
-                {/* <h3>CODE INPUT FORM</h3> */}
+                <CodeField disabled={false} />            
 
                 <br></br>
                 <br></br>
-                <button onClick={() => change()}>
-                    Change
-                </button>
                 <br></br>
 
                 <button onClick={() => navigate('/result')}>
