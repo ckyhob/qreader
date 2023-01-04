@@ -13,6 +13,7 @@
     .scan-preview{
         /* background-color: blueviolet; */
         height: 50vh;
+        min-height: 50vh;
         padding: 15px;
         
     }
@@ -20,6 +21,7 @@
     .result-preview{
         /* background-color: wheat; */
         height: 40vh;
+        min-height: 40vh;
     }
 }
 
