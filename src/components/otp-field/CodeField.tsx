@@ -66,11 +66,12 @@ const CodeField: FC<Props> = (props): JSX.Element => {
                         value = {code[index]}
                         type = "number"
                         maxLength = {1}
-                        className='w-8 h-12 border-2 rounded bg-transparent 
+                        className=' h-12 border-2 rounded bg-transparent 
                                     outline-none text-center font-semibold text-3xl  
                                     transition spin-button-none'
+                        style={{width : '25px'}}
                         onChange = {handleOnChange}
-                        onKeyDown = { (e) => handleKeyDown(e, index) }
+                        onKeyDown = {(e) => handleKeyDown(e, index) }
                     />
                     { ((index === 1) || (index === 5))?  (
                     <span className = "w-2 py-0.5" />

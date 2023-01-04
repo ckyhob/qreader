@@ -48,7 +48,7 @@ const ScanPage = () => {
     return(
             <div classname='wrapper'>      
                     
-                <div className="scan-preview" id="scanPreview">
+                <div className="scan-preview">
                     <div style={{width: `${squareSize}`, height: `${squareSize}`, backgroundColor: 'black'}}>
                         <QrReader
                             delay={delay}
@@ -59,19 +59,19 @@ const ScanPage = () => {
                     </div>
                 </div>
 
-<div className="result-preview">
-                <br></br>
+                <div className="result-preview">
+                    <br></br>
 
-                <CodeField disabled={false} />            
+                    <CodeField disabled={false} />            
 
-                <br></br>
-                <br></br>
-                <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
 
-                <button id="btn1" onClick={() => navigate('/result')}>
-                    To results
-                </button>
-</div>
+                    <button id="btn1" onClick={() => navigate('/result')}>
+                        To results
+                    </button>
+                </div>
             </div>
             )
 }

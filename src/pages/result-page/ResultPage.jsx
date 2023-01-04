@@ -132,7 +132,7 @@ const ResultPage = () => {
                                 </p>
                 </div>
 
-                <br></br>
+                
                 <br></br>
                 <br></br>
                 <button onClick={() => {
