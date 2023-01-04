@@ -13,7 +13,7 @@ const ResultPage = () => {
     return(
             <div className='container'>
 
-                <h3 className="text-2xl font-bold dark:text-white">
+                <h3 className="text-2xl font-bold">
                     Результаты для кода:
                 </h3>
 
