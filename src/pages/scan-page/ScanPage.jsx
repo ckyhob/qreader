@@ -44,7 +44,8 @@ const ScanPage = () => {
 
     const squareSize = `${(Number(Math.min(height, width)) - 30)}px`;
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
     return(
             <div classname='wrapper'>      
                     
